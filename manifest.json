@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+
+  "name": "Facebook OG Visualizer",
+  "description": "Facebook OG Visualizer",
+  "version": "1.0",
+  
+  "permissions": [
+      "tabs", "http://*/*", "https://*/*"
+  ],
+  
+  "background": {
+    "scripts": ["background.js"]
+  },
+  
+  "options_page": "options.html",
+  
+  "browser_action": {},
+  
+  "content_scripts": [
+    {
+      "matches": ["*://*.facebook.com/*"],
+      "css": ["styles/main.css"],
+      "js": ["scripts/jquery.js"]
+    }
+  ]
+
+}
